@@ -1,19 +1,14 @@
 # meta-seo-blogspot
 Meta Tag SEO untuk pengguna blogspot.com
+Tidak perlu saya jelaskan lagi, seberapa penting meta tag SEO dalam dunia website dan blog, karena ini sudah seperti garam dalam masakan.
 
 CARA PEMASANGAN
-1. Silahkan Sobat login ke akun blogger.
-2. Pilih menu Template >> Klik Edit HTML
-3. Cari kode <head> jika sudah ketemu silahkan 
-4. Hapus kode yang berada dibawah head (kode html) ,sampai pada kode <b:skin><![CDATA[
-5. Ganti dengan kode meta seo.
-6. Kemudian simpan Template
+Untuk cara peasangan sudah saya sertakan file .txt, silahkan di baca terlebih dahulu.
 
-Keterangan :
-Adapun letak meta tag terlihat seperti dibawah ini:
-head (kode html)
-Disini letak kode diatas (Meta Tag)<br/>
-<b:skin><![CDATA[
+
+Blog saya :
+1. https://anibarstudio.blogspot.com
+2. https://www.pudintea.web.id
 
 
 Sumber : http://masbibitsukses.blogspot.com/2017/10/cara-memasang-meta-tag-di-blogspot.html
