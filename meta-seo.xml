@@ -1,0 +1,54 @@
+<!-- Meta Title Halaman Error/404 -->
+<b:if cond='data:blog.pageType == "error_page"'>
+<title>404: Maaf halaman yang ada cari tidak ada | Namablog</title>
+</b:if>
+<b:if cond='data:blog.pageType != "item"'>
+<!-- Meta Title Halaman Search -->
+<b:if cond='data:blog.searchQuery'>
+<title>Pencarian keyword untuk :: <data:blog.searchQuery/> :: | Namablog</title>
+</b:if>
+<b:if cond='data:blog.pageType == "archive"'>
+<!-- Meta Title Halaman Arsip -->
+<title>Arsip Artikel Bulan <data:blog.pageName/> | Namablog</title>
+<!-- Meta Descriptin Halaman Arsip -->
+<meta expr:content='"Arsip Artikel Bulan " + data:blog.pageName + " selengkapnya silahkan kunjungi di Namablog"' name='description'/>
+<b:else/>
+<b:if cond='data:blog.pageType == "static_page"'>
+<!-- Meta Title Halaman Pages -->
+<title><data:blog.pageName/> | Namablog</title>
+<b:if cond='data:blog.metaDescription'>
+<!-- Meta Description Halaman Pages Aktif-->
+<meta expr:content='data:blog.metaDescription'  itemprop='description'/>
+<b:else/>
+<!-- Tampilkan jika Meta Description Halaman Page tidak aktif-->
+<meta expr:content='data:blog.pageName + ". Silahkan baca artikel " + data:blog.pageName + " selengkapnya di Namablog"' name='description'/>
+</b:if>
+<b:else/>
+<!-- Meta Title Halaman Label -->
+<b:if cond='data:blog.searchLabel'>
+<title>Pencarian pada Label :: <data:blog.pageName/> :: | Namablog</title>
+<!-- Meta Description Halaman Label -->
+<meta expr:content='"Pencarian pada kategori ::" + data:blog.pageName + ":: selengkapnya silahkan kunjungi di Namablog."' name='description'/>
+<b:else/>
+<!-- Meta Title Halaman Utama -->
+<title><data:blog.pageTitle/> | Namablog</title>
+<!-- Meta Description Halaman utama -->
+<meta expr:content='data:blog.pageTitle + " Tulis deskripsi blog anda disini."' name='description'/>
+</b:if>
+</b:if>
+</b:if>
+<!-- Meta Keyword Halaman utama-->
+<meta content='keyword1, keyword2, dst' name='keywords'/>
+<b:else/>
+<!-- Meta Title Halaman Post -->
+<title><data:blog.pageName/> - Namablog</title>
+<!-- Meta Description Halaman Post aktif -->
+<b:if cond='data:blog.metaDescription'>
+<meta expr:content='data:blog.metaDescription'  itemprop='description'/>
+<b:else/>
+<!-- Tampilkan jika Meta Description Halaman post tidak aktif-->
+<meta expr:content='data:blog.pageName + ". Silahkan baca artikel " + data:blog.pageName + " selengkapnya di NamaBlog"' name='description'/>
+</b:if>
+<!-- Meta Keyword Halaman post -->
+<meta expr:content='data:blog.pageName + ", keyword1, keyword2, dst"' name='keywords'/>
+</b:if>
